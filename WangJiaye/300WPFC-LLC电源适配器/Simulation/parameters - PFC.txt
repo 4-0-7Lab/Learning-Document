@@ -1,0 +1,14 @@
+L=780e-6
+C=220e-6
+
+//ESR of  DC Link Capacitor
+ESR=20m
+C_link=1.2e-6
+
+
+//ESL of  Bus Bar
+ESL_b=10n
+ESR_b=0
+
+//ESL of Power Switch
+ESL_s=5n

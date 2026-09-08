@@ -1,0 +1,79 @@
+// Note: The parameter file needs to be regenerated from the Design Suite 
+//           when any of the input parameters are changed.
+
+//********************************************
+//
+//     Parameters from User Input
+//
+//********************************************
+
+//-------------- EMI filter ---------------
+filter_enable = 0;	// 0 = EMI filter disabled; 1 = EMI filter enabled
+
+filter_type = 0;	     // filter type: 0 = L-type; 1 = pi-type; 2 = T-type
+num_stage = 1;	// number of filter stages: 1 = 1-stage;  2 = 2-stage 
+
+// X capacitor
+Cx = 4.7E-06; 		
+R_Cx = 0; 	     // Cx ESR
+L_Cx = 0; 	      // Cx ESL
+
+// Y capacitor
+Cy = 1E-07;		
+R_Cy = 0; 	     // Cy ESR
+L_Cy = 0; 	      // Cy ESL
+
+// Common-mode inductor
+k_leakage_cm = 0.05;  	// ratio between L_leakage and L_cm of the common-mode inductor
+R_cm = 0.0001;  	// CM inductor winding resistance
+C_cm = 0;  	// CM inductor winding capacitance
+
+// Differential-mode inductor
+R_dm = 0.0001;  	// DM inductor winding resistance
+
+// Damping branch
+Cd = 0;  	// Damping capacitor
+R_Cd = 0;  	// Damping capacitor ESR
+
+//--------------  Common-mode Capacitances  -----------------
+C_cm1 = 5E-11;		// common-mode capacitance, in F
+C_cm2 = 5E-11;
+C_cm3 = 5E-11;
+C_cm4 = 5E-11;
+C_cm5 = 5E-11;
+C_cm6 = 5E-11;
+C_cm7 = 5E-11;
+C_cm8 = 5E-11;
+C_cm9 = 5E-11;
+C_cm10 = 5E-11;
+C_cm11 = 5E-11;
+C_cm12 = 5E-11;
+C_cm13 = 5E-11;
+C_cm14 = 5E-11;
+C_cm15 = 5E-11;
+
+//-------------- Common-mode Noise -----------------
+freq_cm_EMI = 195000;	// Lowest frequency of CM noise where EMI standard fails
+Amp_cm_EMI = 79.59999999999999;	// CM noise at freq_cm_EMI, in dB uV
+Amp_cm_EMI_Std = 52.7;	// EMI standard at freq_cm_EMI, in dB uV
+
+//-------------- Differential-mode Noise -----------------
+freq_dm_EMI = 195000;	// Lowest frequency of DM noise where EMI standard fails
+Amp_dm_EMI = 78.09999999999999;	// DM noise at freq_cm_EMI, in dB uV
+Amp_dm_EMI_Std = 52.7;	// EMI standard at freq_cm_EMI, in dB uV
+
+
+//********************************************
+//
+//     Parameters from Calculation
+//
+//********************************************
+
+//-------------- EMI Filter -----------------
+fc_cm = 29345.03361664903;
+fc_dm = 31991.50057739103;
+
+L_cm = 0.0001548165693875711;		// inductance of common-mode choke, in H
+L_leakage = 7.740828469378556E-06;		// leakage inductance of common-mode choke, in H
+
+L_dm = 0;		// differential-mode inductance, in H. If L_dm = 0, L_dm is not needed.
